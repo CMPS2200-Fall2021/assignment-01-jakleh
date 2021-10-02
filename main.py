@@ -22,11 +22,10 @@ def longest_run(mylist, key):
         else:
             if longest_run < counter:
                 longest_run = counter
-                counter = 0
+            counter = 0
+        if longest_run < counter:
+            longest_run = counter
 
-    if longest_run < counter:
-        longest_run = counter
-        
     return longest_run
 
 
@@ -105,5 +104,3 @@ def combine_function(left_result, right_result):
 ## Feel free to add your own tests here.
 def test_longest_run():
     assert longest_run_recursive([2,12,12,8,12,12,12,12], 12) == 3
-
-print(longest_run_recursive([0], 12))
