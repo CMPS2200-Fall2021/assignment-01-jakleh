@@ -23,6 +23,9 @@ def longest_run(mylist, key):
             if longest_run < counter:
                 longest_run = counter
                 counter = 0
+        if longest_run < counter:
+                longest_run = counter
+                
     return longest_run
 
 
